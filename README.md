@@ -6,7 +6,7 @@ An unofficial [dockerfile](https://docs.docker.com/engine/reference/builder/) fo
 
 ```bash
 # build docker image from Dockerfile
-docker build -t stencil dockerfile
+docker build -t stencil Dockerfile
 ```
 
 ## Run
