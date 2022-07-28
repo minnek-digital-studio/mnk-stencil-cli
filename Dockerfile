@@ -1,12 +1,12 @@
 # Dockerfile
 
 # Use official node parent image
-FROM node:12
+FROM node:14
 
 # Set container working directory
 WORKDIR /theme
 
-# Install stencil cli
+# Install stencil cli latest version
 RUN npm -g config set user root
 RUN npm install -g @bigcommerce/stencil-cli
 
