@@ -6,12 +6,12 @@ An unofficial [dockerfile](https://docs.docker.com/engine/reference/builder/) fo
 
 ```bash
 # build docker image from Dockerfile
-docker build -t stencil Dockerfile
+docker build -t stencil-cli Dockerfile
 ```
 
 ## Run
 
-**OSX & Linux**:
+### OSX & Linux:
 
 ```bash
 # stencil init
@@ -21,7 +21,7 @@ docker run -it -v $(pwd):/theme -p3000:3000 stencil init
 docker run -it -v $(pwd):/theme -p3000:3000 stencil start
 ```
 
-**Windows (bash)**:
+### Windows (bash):
 
 ```bash
 # stencil init
@@ -31,19 +31,22 @@ docker run -it -v /$(PWD):/theme -p3000:3000 stencil init
 docker run -it -v /$(PWD):/theme -p3000:3000 stencil start
 ```
 
-## .bashrc entry
+## Creating an alias
+
+### .bashrc entry
 
 Open `~/.bashrc` in your preferred editor and add an `alias` for the docker command.
 
-**OSX & Linux:**
+### OSX & Linux:
+
 ```bash
-alias stencil="docker run -it -v $(pwd):/theme -p3000:3000 stencil"
+alias stencil-cli="docker run -it -v $(pwd):/theme -p3000:3000 stencil"
 ```
 
-**Windows**:
+### Windows:
 
 ```bash
-alias stencil="docker run -it -v /$(PWD):/theme -p3000:3000 stencil"
+alias stencil-cli="docker run -it -v /$(PWD):/theme -p3000:3000 stencil"
 ```
 
 Reload your `~/.bashrc`.
@@ -52,8 +55,8 @@ Reload your `~/.bashrc`.
 source ~/.bashrc
 ```
 
-Now you can use the `stencil` alias to run the docker command.
+Now you can use the `stencil-cli` alias to run the docker command.
 
 ```bash
-stencil start
+stencil-cli start
 ```
