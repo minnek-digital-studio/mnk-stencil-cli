@@ -1,7 +1,7 @@
 # Dockerfile
 
 # Use official node parent image
-FROM node:14
+FROM --platform=linux/amd64 node:14
 
 # Set container working directory
 WORKDIR /theme
