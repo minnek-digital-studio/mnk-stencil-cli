@@ -1,21 +1,15 @@
-# Dockerfile
+FROM --platform=linux/amd64 node:14.20.0
 
-# Use official node parent image
-FROM --platform=linux/amd64 node:14
+WORKDIR /home/node/stencil-cli
 
-# Set container working directory
-WORKDIR /theme
+ENV NODE_ENV production
 
-# Install stencil cli latest version
 RUN npm -g config set user root
-RUN npm install -g @bigcommerce/stencil-cli
 
-# Install theme dependencies
-RUN npm i
+RUN npm install --production -g @bigcommerce/stencil-cli
 
-# Default command
+RUN npm install --production -g grunt-cli
+
 ENTRYPOINT ["stencil"]
-CMD ["--help"]
 
-# Publish cli default port
-EXPOSE 3000
+CMD ["--help"]

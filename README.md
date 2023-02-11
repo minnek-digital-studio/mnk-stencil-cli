@@ -3,73 +3,23 @@
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://assets.minnekdigital.com/logo-md.jpg">
       <img alt="Minnek Logo" src="https://assets.minnekdigital.com/logo-md.jpg">
-    </picture>    
+    </picture>
   </a>
 </p>
 
 ---
 
-# Docker Stencil CLI
+# BigCommerce Stencil CLI Image
 
-An unofficial [dockerfile](https://docs.docker.com/engine/reference/builder/) for BigCommerce's [Stencil CLI](https://github.com/bigcommerce/stencil-cli).
+This is a base image designed for working with BigCommerce stencil themes and Github actions, includes:
+- NodeJS 14.20.0
+- Stencil CLI
+- Grunt CLI
 
 ## Build
 
 ```bash
-# build docker image from Dockerfile
-docker build -t stencil-cli -f Dockerfile .
-```
-
-## Run
-
-### OSX & Linux:
-
-```bash
-# stencil init
-docker run -it -v $(pwd):/theme -p3000:3000 stencil init
-
-# stencil start
-docker run -it -v $(pwd):/theme -p3000:3000 stencil start
-```
-
-### Windows (bash):
-
-```bash
-# stencil init
-docker run -it -v /$(PWD):/theme -p3000:3000 stencil init
-
-# stencil start
-docker run -it -v /$(PWD):/theme -p3000:3000 stencil start
-```
-
-## Creating an alias
-
-### .bashrc entry
-
-Open `~/.bashrc` in your preferred editor and add an `alias` for the docker command.
-
-### OSX & Linux:
-
-```bash
-alias stencil-cli="docker run -it -v $(pwd):/theme -p3000:3000 stencil"
-```
-
-### Windows:
-
-```bash
-alias stencil-cli="docker run -it -v /$(PWD):/theme -p3000:3000 stencil"
-```
-
-Reload your `~/.bashrc`.
-
-```bash
-source ~/.bashrc
-```
-
-Now you can use the `stencil-cli` alias to run the docker command.
-
-```bash
-stencil-cli start
+docker build -t bigcommerce-stencil-cli .
 ```
 
 ## About
