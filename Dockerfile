@@ -1,11 +1,9 @@
-FROM --platform=linux/amd64 node:18.17.1
+FROM --platform=linux/amd64 node:18
 
-WORKDIR /home/node/stencil-cli
+WORKDIR /home/node/app
 
 ENV NODE_ENV production
 
-RUN npm -g config set user root
-
-RUN npm install --production -g @bigcommerce/stencil-cli
+RUN npm install --production -g @bigcommerce/stencil-cli@latest
 
 RUN npm install --production -g grunt-cli

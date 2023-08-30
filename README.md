@@ -12,8 +12,9 @@
 # BigCommerce Stencil CLI Image
 
 This is a base image designed for working with BigCommerce stencil themes and Github actions, includes:
-- NodeJS 18.15.0
+- NodeJS 18
 - Stencil CLI
+- Grunt CLI
 
 ## Build
 
