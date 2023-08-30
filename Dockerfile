@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:18.15.0
+FROM --platform=linux/amd64 node:18.17.1
 
 WORKDIR /home/node/stencil-cli
 
