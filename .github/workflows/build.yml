@@ -20,5 +20,5 @@ jobs:
       - name: Build Multi Arch Docker Image
         run: |
           docker buildx build --push \
-            --tag anthuanv/mnk-bc-stencil-cli:latest \
+            --tag minnek/mnk-stencil-cli:latest \
             --platform linux/amd64,linux/arm/v7,linux/arm64 .
